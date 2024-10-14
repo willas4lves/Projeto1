@@ -5,16 +5,18 @@ const cars = [
   { id: "1", model: "Honda Civic", price: "R$ 80.000" ,
     image: require('../components/img/civic.png')
   },
-  { id: "2", model: "Toyota Corolla", price: "R$ 90.000", 
-    image: require('../components/img/corolla 86.png')
+  { id: "2", model: "Toyota Corolla ae86", price: "R$ 190.000", 
+    image: require('../components/img/toyotaae86.jpg')
   },
-  { id: "3", model: "Ford Focus", price: "R$ 85.000" ,
+  { id: "3", model: "Ford Focus rs", price: "R$ 95.000" ,
     image: require('../components/img/ford focus rs.png')
    },
 ];
 
 export default function CarListScreen({ navigation }) {
     return (
+      <ImageBackground source={require('../components/img/fundo4.png')}
+      styles={styles.background}>
       <View>
         <FlatList
           data={cars}
@@ -33,6 +35,7 @@ export default function CarListScreen({ navigation }) {
           )}
         />
       </View>
+      </ImageBackground>
     );
 }
 
@@ -40,7 +43,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 16,
-    backgroundColor: 'gray',
+    backgroundColor: 'white',
   },
   item: {
     padding: 16,
@@ -49,10 +52,20 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 18,
+    color:'white',
   },
-  movieImage: {
-    width: 1,
-    height: 1,
-    resizeMode: 'cover'
+  carImage: {
+    width: 150,
+    height: 150,
+    resizeMode: 'center',
+    backgroundColor: 'rgba(0, 0, 0, 0.5)'
+  },
+  background: {
+    flex: 1,
+    backgroundColor: 'no-repeat',
+    width:'100%',
+    height:'100%',
+    resizeMode: 'cover',
+    justifyContent: 'center',
   },
 });

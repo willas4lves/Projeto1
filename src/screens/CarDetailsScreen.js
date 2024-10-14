@@ -6,10 +6,10 @@ export default function CarDetailsScreen ({ route }) {
 
     return (
         <View>
-            <Text style={styles.model}>Modelo: {car.model}</Text>
-            <Text style={styles.price}>Preço: {car.price}</Text>
+          <Text style={styles.model}>Modelo: {car.model}</Text>
+          <Text style={styles.price}>Preço: {car.price}</Text>
         </View>
-    )
+    );
 }
 
 const styles = StyleSheet.create({
@@ -17,6 +17,7 @@ const styles = StyleSheet.create({
         flex: 1,
         padding: 16,
         justifyContent:'center',
+        backgroundColor:'gray',
     },
     model: {
         fontSize: 24,
@@ -25,5 +26,6 @@ const styles = StyleSheet.create({
     price: {
         fontSize: 16,
         marginTop: 8,
-    }
+    },
+    
 })
