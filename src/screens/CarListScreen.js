@@ -17,7 +17,7 @@ export default function CarListScreen({ navigation }) {
     return (
       <ImageBackground source={require('../components/img/fundo4.png')}
       styles={styles.background}>
-      <View>
+      <View styles={styles.container}>
         <FlatList
           data={cars}
           keyExtractor={(item) => item.id}
@@ -62,7 +62,6 @@ const styles = StyleSheet.create({
   },
   background: {
     flex: 1,
-    backgroundColor: 'no-repeat',
     width:'100%',
     height:'100%',
     resizeMode: 'cover',
