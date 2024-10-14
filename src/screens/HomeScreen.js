@@ -1,6 +1,6 @@
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { View,Text, StyleSheet, TouchableOpacity, Button } from "react-native";
+import { View,Text, StyleSheet, TouchableOpacity, Button, ImageBackground } from "react-native";
 
 export default function Homescreen() {
     const navigation = useNavigation()
@@ -21,18 +21,22 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent:'center',
         alignItems: 'center',
+        backgroundColor: 'gray'
     },
     title: {
-        fontSize:50,
-        fontWeight: 'bold',
+        fontSize:25,
+        marginBottom:20,
+        color:'white',
     },
     button: {
         margin:10,
         padding: 10,
         backgroundColor: 'red',
+        
     },
     stitle: {
         fontSize: 20,
         fontWeight:'bold',
+        color:'white'
     }
 })
