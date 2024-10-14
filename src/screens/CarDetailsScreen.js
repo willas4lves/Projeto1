@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Button,StyleSheet } from "react-native";
+import { View, Text, Button,StyleSheet, Image } from "react-native";
 
 export default function CarDetailsScreen ({ route }) {
     const { car } = route.params;

@@ -21,11 +21,13 @@ export default function CarListScreen({ navigation }) {
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
             <TouchableOpacity
-              onPress={() => navigation.navigate("CarDetails", { car: item })}
+              onPress={() =>
+                navigation.navigate("CarDetailScreen", { car: item })
+              }
             >
-              <Image source={item.image} style={styles.carImage}/>
-              <Text 
-              style={styles.title}>{item.model} - {item.price}
+              <Image source={item.image} style={styles.carImage} />
+              <Text style={styles.title}>
+                {item.model} - {item.price}
               </Text>
             </TouchableOpacity>
           )}
